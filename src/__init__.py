@@ -1,6 +1,8 @@
 import os
 
 from flask import Flask
+from .api import api as api_blueprint
+
 
 def create_app(test_config=None):
     # create and configure the app
@@ -20,8 +22,11 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/hello')
-    def hello():
-        return '<h2>Hello, World!</h2>'
+    app.register_blueprint(api_blueprint, url_prefix='/api')
+
+
+    # @app.route('/api/hello')
+    # def hello():
+    #     return '<h2>Hello, World!</h2>'
 
     return app
