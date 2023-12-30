@@ -12,6 +12,8 @@ ADD . $APP_HOME
 
 WORKDIR $APP_HOME
 
+RUN virtualenv .venv
+
 RUN pip install poetry
 
 RUN poetry install
