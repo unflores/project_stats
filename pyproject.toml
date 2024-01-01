@@ -10,6 +10,9 @@ python = "^3.12"
 flask = "^3.0.0"
 python-dotenv = "^1.0.0"
 
+[tool.poetry.group.development.dependencies]
+ruff = "^0.1.9"
+
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.3"
 
