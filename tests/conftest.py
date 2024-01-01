@@ -1,19 +1,15 @@
 import pytest
+import os
 from src import create_app
 
 @pytest.fixture()
 def app():
+    # Overriding the flask env here will allow for the testing
+    # dot env to be loaded. See config
+    os.environ['FLASK_ENV'] = 'testing'
+
     app = create_app()
-    app.config.update({
-        "TESTING": True,
-    })
-
-
-    # TODO: WHAT DO I NEED TO SET UP
-    # HOW WILL dotenv work with this
     yield app
-
-    # TODO WHAT DO I NEE TO TEAR DOWN?
 
 
 @pytest.fixture()
