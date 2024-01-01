@@ -11,7 +11,6 @@ def create_app():
         os.makedirs(app.instance_path)
     except OSError:
         pass
-    print('secret key => ', app.config['SECRET_KEY'])
 
     app.register_blueprint(api_blueprint, url_prefix='/api')
 

@@ -7,10 +7,10 @@ FLASK_ENV = os.getenv("FLASK_ENV", "development")
 
 def get_env_file(env):
   if env == 'development':
-    return "development.env"
+    return 'development.env'
   elif env == 'testing':
-    return "testing.env"
+    return 'testing.env'
 
 load_dotenv(os.path.join(dotenv_path, get_env_file(FLASK_ENV)))
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv('SECRET_KEY')
