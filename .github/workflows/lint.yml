@@ -24,3 +24,6 @@ jobs:
 
       - name: Lint Code
         run: poetry run ruff check
+
+      - name: Pretty that code
+        run: poetry run ruff format --check
