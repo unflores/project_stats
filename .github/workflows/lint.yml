@@ -19,6 +19,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Install poetry
+        run: pip install poetry
+
       - name: Install ruff
         run: poetry install --only=development
 
