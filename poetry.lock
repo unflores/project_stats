@@ -194,13 +194,13 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "pytest"
-version = "7.4.3"
+version = "7.4.4"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pytest-7.4.3-py3-none-any.whl", hash = "sha256:0d009c083ea859a71b76adf7c1d502e4bc170b80a8ef002da5806527b9591fac"},
-    {file = "pytest-7.4.3.tar.gz", hash = "sha256:d989d136982de4e3b29dabcc838ad581c64e8ed52c11fbe86ddebd9da0818cd5"},
+    {file = "pytest-7.4.4-py3-none-any.whl", hash = "sha256:b090cdf5ed60bf4c45261be03239c2c1c22df034fbffe691abe93cd80cea01d8"},
+    {file = "pytest-7.4.4.tar.gz", hash = "sha256:2cf0005922c6ace4a3e2ec8b4080eb0d9753fdc93107415332f50ce9e7994280"},
 ]
 
 [package.dependencies]
@@ -227,6 +227,32 @@ files = [
 cli = ["click (>=5.0)"]
 
 [[package]]
+name = "ruff"
+version = "0.1.10"
+description = "An extremely fast Python linter and code formatter, written in Rust."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "ruff-0.1.10-py3-none-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:ee49ed7f7fc9daeb0e10bca3e9801efdda60bbf425f7856f2ac2f7207168d569"},
+    {file = "ruff-0.1.10-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:c0ccbbb363aaf4e8cbdee1f928f0fdaed0ccac2a4f2e472bb7af17f071480437"},
+    {file = "ruff-0.1.10-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:71994cf0b98856f956ff9fbf32e06e642e3de91ce324504b7a5bd381e1944efa"},
+    {file = "ruff-0.1.10-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:61609eacb860ae3c2fe603c85c0cbbf2f5f5da5865271441fd672cba5d995880"},
+    {file = "ruff-0.1.10-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:f786571ac9d2f3db0393ee453d5d586de4ee5e911c53c7514032c45fd5e50d1d"},
+    {file = "ruff-0.1.10-py3-none-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:0820929df7f0a1ace749ebaedc412659f558bc31fa0f187e48a2d566535477e0"},
+    {file = "ruff-0.1.10-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:ab13793b9c423873e72de99d985780cd9dbe91e9cf742b3c40b40c3470bcf4b7"},
+    {file = "ruff-0.1.10-py3-none-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:8d8e685efed68405cc0b07d789abd5b02a7ccbf6f1998a3a55655aeaeb0f9cf4"},
+    {file = "ruff-0.1.10-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0562f9846b8330ef99b07127b9223943d12135b143f1695659bbaa6b8ad2180c"},
+    {file = "ruff-0.1.10-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:94fc0f7a95558d3306df745648d64b27807a0fc2032893a8d87d52ce3954bf0b"},
+    {file = "ruff-0.1.10-py3-none-musllinux_1_2_armv7l.whl", hash = "sha256:d440ad091cd43b9b8adfb3802844b4691b5c9c3a29febfc17e7b779105ccdd91"},
+    {file = "ruff-0.1.10-py3-none-musllinux_1_2_i686.whl", hash = "sha256:ccc60939eee82a698eed442f7b4d59c7f0702ee240e3d6c67c4f434c96329585"},
+    {file = "ruff-0.1.10-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:97b1896b6c33f9abb8284bebc92d117a3db98cb4f939e18ae6ead1fc126f213a"},
+    {file = "ruff-0.1.10-py3-none-win32.whl", hash = "sha256:7c3bdea51a4e778f37c40fec4a92a442e928b3126314617ccdc6a69dc48c8e46"},
+    {file = "ruff-0.1.10-py3-none-win_amd64.whl", hash = "sha256:0db9995e8973f964ca5d2199775e81b05cc5d78b957d30866b715fc4318ff0df"},
+    {file = "ruff-0.1.10-py3-none-win_arm64.whl", hash = "sha256:6671c90894e9ba2c85372557a588baa44f1abe9ffc95791c0c3071cb904dab43"},
+    {file = "ruff-0.1.10.tar.gz", hash = "sha256:2d74594bbdc4abe6b523e1998183dcdea17e0d3f22082abde8074a8c9b1a94d9"},
+]
+
+[[package]]
 name = "werkzeug"
 version = "3.0.1"
 description = "The comprehensive WSGI web application library."
@@ -246,4 +272,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "661c00027f3868e66a1fd06deca5a2c004d49b05d9111c1311545317446e8a46"
+content-hash = "bf8b3e613e95dcc2bc79c7cea9e7ede11e8fc3535875580dd1d449ca30abdb73"

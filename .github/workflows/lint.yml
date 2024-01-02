@@ -1,0 +1,32 @@
+name: Lint
+
+on:
+  push:
+
+env:
+  PYTHON_VERSION: 3.12.1
+
+jobs:
+  linting:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pip install poetry
+
+      - name: Install ruff
+        run: poetry install --only=development
+
+      - name: Lint Code
+        run: poetry run ruff check
+
+      - name: Pretty that code
+        run: poetry run ruff format --check

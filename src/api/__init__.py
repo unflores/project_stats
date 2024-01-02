@@ -1,5 +1,5 @@
 from flask import Blueprint
+from .occurances import occurances
 
 api = Blueprint('api', __name__)
-
-from . import occurances
+api.register_blueprint(occurances)
