@@ -1,8 +1,5 @@
 ---
 version: '3'
-volumes:
-  db-data:
-    external: false
 services:
   dev:
 
@@ -15,3 +12,14 @@ services:
       - 5000:5000
     volumes:
       - '.:/var/service:cached'
+  postgres:
+    image: postgres:16.1
+    environment:
+      POSTGRES_USER: project_stats
+      POSTGRES_PASSWORD: project_stats
+    volumes:
+      - ./docker/postgres/create_database.sql:/docker-entrypoint-initdb.d/create_database.sql
+
+
+    ports:
+      - 127.0.0.1:5432:5432
