@@ -16,7 +16,12 @@ def _get_env_file(env):
 
 
 def build_settings(envs_path, env_file):
-    env_settings = {**dotenv_values(os.path.join(envs_path, env_file))}
+    if env_file is None:
+        env_settings = {
+            key: '' for key in dotenv_values(os.path.join(envs_path, 'development.env'))
+        }
+    else:
+        env_settings = {**dotenv_values(os.path.join(envs_path, env_file))}
 
     settings = {}
 
