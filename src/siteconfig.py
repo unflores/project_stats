@@ -15,4 +15,6 @@ def get_env_file(env):
 
 load_dotenv(os.path.join(dotenv_path, get_env_file(FLASK_ENV)))
 
+# TODO Make this less annoying
 SECRET_KEY = os.getenv('SECRET_KEY')
+SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
