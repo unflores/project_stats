@@ -6,4 +6,3 @@ class Occurance(db.Model):
     __tablename__ = 'Occurances'
 
     id: Mapped[int] = mapped_column(db.Integer, primary_key=True)
-    name: Mapped[str] = mapped_column(db.String)
