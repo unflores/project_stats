@@ -2,11 +2,14 @@ import os
 
 from flask import Flask
 from .api import api as api_blueprint
+from .database import db
 
 
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('siteconfig.py')
+
+    db.init_app(app)
 
     try:
         os.makedirs(app.instance_path)
