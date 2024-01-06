@@ -5,12 +5,12 @@ from flask_migrate import Migrate
 
 from .api import api as api_blueprint
 from .database import db
-from .config import settings
+from .config import build_settings
 
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_mapping(settings)
+    app.config.from_mapping(build_settings())
 
     db.init_app(app)
     Migrate(app, db)
