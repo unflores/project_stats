@@ -5,6 +5,11 @@ from flask_migrate import Migrate
 
 from .api import api as api_blueprint
 from .database import db
+
+# Bizarre but I have to load this to run db migrate
+# There is probably a problem with the way I am struturing my models and db module
+from .database import models  # noqa: F401
+
 from .config import build_settings
 
 
