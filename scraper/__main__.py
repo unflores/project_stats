@@ -1,5 +1,6 @@
-from . import build_parser
+from sys import argv
+from args import parse_args
 
 if __name__ == '__main__':
-    parser = build_parser()
-    args = parser.parse_args()
+    args = parse_args(args=argv[1:])
+    # processor = build_processor(type=args['processor'])
